@@ -31,3 +31,13 @@ function listarAmigos() {
         lista.appendChild(li);
     }
 }
+
+function sortearAmigo() {
+    if (amigos.length === 0) {  //Verifica se tem algum nome no vetor "amigos"
+        return;
+    }
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);  //Gera um indice aleatorio até o tamanho máximo do vetor
+    let nomeSorteado = amigos[indiceAleatorio];
+    const frase = document.getElementById('resultado');
+    frase.innerHTML = 'O amigo secreto sorteado é: ' + nomeSorteado;  //Escreve na tela a frase do amigo sorteado
+}
